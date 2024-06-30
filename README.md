@@ -24,7 +24,7 @@ This function prompts the user to input student marks and outputs the correspond
 - **D**: 40 to 49
 - **E**: Marks < 40
 
-### Example Usage
+### 
 
 ```javascript
 function studentGradeGenerator(marks) {
