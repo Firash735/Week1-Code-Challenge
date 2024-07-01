@@ -1,18 +1,26 @@
-// function to detect speed violations
-function speedDetectoe (speed) {
-    const SpeedLimit = 70;
-    const KmPerPoint = 5;
+	
+// Import the prompt-sync library
+const prompt = require('prompt-sync')();
 
+// Function to detect speed violations
+function speedDetector() {
+    // Prompt the user to enter the speed
+    const speed = Number(prompt("Enter the speed of the car: "));
 
-    if (speed <= SpeedLimit) {
-        console.log("Ok");
+const SpeedLimit = 70;
+const KmPerPoint = 5;
+
+if (speed <= SpeedLimit) {
+    console.log("Ok");
+} else {
+    const points = Math.floor((speed - SpeedLimit) / KmPerPoint);
+    if (points >= 12) {
+        console.log(`Points: ${points}. License suspended.`);
     } else {
-        const points = Math.floor((speed - SpeedLimit) / KmPerPoint);
-        if (points >= 12) {
-            console.log('Points: ${Points}. License suspended.'); 
-        } else {
-            console.log('points: ${points}');
-        }
+        console.log(`Points: ${points}`);
     }
-    
 }
+}
+
+// Call the function
+speedDetector();
