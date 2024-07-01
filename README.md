@@ -1,30 +1,61 @@
 # Week1-Code-Challenge
 Repository for Week 1 toy problems assignment.
-Challenge 1: Student Grade Generator (Toy Problem)
+ Toy Problems
 
-Write a function that prompts the user to input student marks. The input should be between 0 and 100. The output should correspond the correct grade, as shown below: 
+This repository contains solutions for three week 1 toy problems code Challenge: Student Grade Generator, Speed Detector, and Net Salary Calculator. I used the problem to solve using JavaScript.
 
-        A > 79, B - 60 to 79, C -  59 to 49, D - 40 to 49, E - less 40.
+- Challenge 1 Student Grade Generator 
+- Challenge 2 Speed Detector 
+- Challenge 3 Net Salary Calculator 
 
- 
+## Challenge 1 Grade Generator
 
-Challenge 2: Speed Detector (Toy Problem)
+This function prompts the user to input student marks and outputs the corresponding grade based on the marks.
 
-Write a program that takes the speed of a car as input e.g 80. If the speed is less than 70, it should print “Ok”. Otherwise, for every 5 km/s above the speed limit (70), it should give the driver one demerit point and print the total number of demerit points.
+ A: Marks > 79
+ B: 60 to 79
+ C: 50 to 59
+ D: 40 to 49
+ E: Marks < 40
 
-   > For example, if the speed is 80, it should print: “Points: 2”. If the driver gets more than 12 points, the function should print: “License suspended”.
+```javascript
+function studentGradeGenerator(marks) {
+    if (marks > 79) return 'A';
+    if (marks >= 60) return 'B';
+    if (marks >= 50) return 'C';
+    if (marks >= 40) return 'D';
+    return 'E';
+}
+This program takes the speed of a car as input and determines whether the speed is within the limit or if the driver should receive demerit points.
 
- 
+Speed Criteria
+Speed <= 70: "Ok"
+For every 5 km/s above 70: 1 demerit point
+Points > 12: "License suspended"
 
-Challenge 3: Net Salary Calculator (Toy Problem)
+## Challenge 3: Net Salary Calculator
 
-Write a program whose major task is to calculate an individual’s Net Salary by getting the inputs of basic salary and benefits. Calculate the payee (i.e. Tax), NHIF Deductions, NSSF Deductions, gross salary, and net salary. 
+This program calculates an individual’s net salary by taking into account the basic salary and benefits. It calculates the PAYE (Tax), NHIF deductions, NSSF deductions, gross salary, and net salary.
 
-NB: Use KRA, NHIF, and NSSF values provided in the link below.
+### Inputs
 
-- https://www.aren.co.ke/payroll/taxrates.htm Links to an external site.
+- **Basic Salary**: The base salary of the individual.
+- **Benefits**: Additional benefits provided to the individual.
 
-Links to an external site.-  Links to an external site.Links to an external site.
+### Outputs
 
-- www.kra.go.ke/en/individual/calculate-tax/calculating-tax/payeLinks to an external site.
+- **Gross Salary**: The total salary before any deductions. Calculated as the sum of basic salary and benefits.
+- **PAYE (Tax)**: Income tax based on the gross salary.
+- **NHIF Deductions**: Health insurance deductions based on the gross salary.
+- **NSSF Deductions**: Pension contributions based on the gross salary.
+- **Net Salary**: The total salary after all deductions.
+
+### Detailed Breakdown
+
+#### Gross Salary Calculation
+
+The gross salary is the sum of the basic salary and any benefits:
+
+```javascript
+const grossSalary = basicSalary + benefits;
 
