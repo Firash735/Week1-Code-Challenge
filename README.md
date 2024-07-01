@@ -10,7 +10,7 @@ This repository contains solutions for three week 1 toy problems code Challenge:
 
 ## Challenge 1 Grade Generator
 
-This function prompts the user to input student marks and outputs the corresponding grade based on the marks.
+This project contains a function that prompts the user to input student marks and generates the corresponding grade based on the marks. The marks should be between 0 and 100, and the grades are assigned as follows:
 
  A: Marks > 79
  B: 60 to 79
@@ -25,6 +25,7 @@ function studentGradeGenerator(marks) {
     if (marks >= 50) return 'C';
     if (marks >= 40) return 'D';
     return 'E';
+
 }
 This program takes the speed of a car as input and determines whether the speed is within the limit or if the driver should receive demerit points.
 
